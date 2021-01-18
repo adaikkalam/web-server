@@ -18,7 +18,8 @@ const forecast = (city, callback) => {
             let desc = current.weather_descriptions[0]
             let temp = current.temperature
             let feelslike = current.feelslike
-            callback(undefined, desc + '. It is currently ' + temp + ' degrees out, but feels like ' + feelslike + ' degrees.')
+            let humidity = current.humidity
+            callback(undefined, desc + '. It is currently ' + temp + ' degrees out, but feels like ' + feelslike + ' degrees. Humidity is ' + humidity + '%')
         }
     })
 }
